@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>유승훈 | 캐이터링</title>
+  <meta name="description" content="유승훈의 프로필 웹사이트 - 캐이터링, 생활 체육을 사랑하는 하늘의 밥맨" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // 바이올렛 + 네이비 테마
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              900: '#1b2438',
+            },
+          },
+          fontFamily: {
+            sans: ['Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Pretendard 한글 웹폰트 -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+  <!-- 헤더 -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="mx-auto max-w-none px-6 md:px-10 lg:px-16 h-20 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3 text-lg font-bold tracking-tight text-brand-900">
+        <span class="w-9 h-9 rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-500 text-white flex items-center justify-center text-sm font-bold">유</span>
+        유승훈
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 ml-auto mr-0 text-sm font-medium text-slate-600">
+        <li><a href="#top" data-nav class="nav-link hover:text-brand-600 transition">Home</a></li>
+        <li><a href="#about" data-nav class="nav-link hover:text-brand-600 transition">About</a></li>
+        <li><a href="#skills" data-nav class="nav-link hover:text-brand-600 transition">Skills</a></li>
+        <li><a href="#projects" data-nav class="nav-link hover:text-brand-600 transition">Projects</a></li>
+        <li>
+          <a href="#contact"
+             class="inline-flex items-center rounded-lg bg-violet-600 px-5 py-2.5 font-semibold text-white shadow-md shadow-violet-600/30 hover:bg-violet-700 transition">
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <button id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false"
+              class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- 모바일 메뉴 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur border-t border-slate-100">
+      <ul class="flex flex-col px-6 py-4 gap-4 text-slate-700 font-medium">
+        <li><a href="#top" class="block py-1">Home</a></li>
+        <li><a href="#about" class="block py-1">About</a></li>
+        <li><a href="#skills" class="block py-1">Skills</a></li>
+        <li><a href="#projects" class="block py-1">Projects</a></li>
+        <li><a href="#contact" class="block py-1 font-semibold text-violet-600">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 히어로 -->
+    <section class="relative overflow-hidden pt-36 pb-24 md:pt-44 md:pb-32">
+      <div class="hero-blob"></div>
+      <div class="relative mx-auto max-w-6xl px-6 grid md:grid-cols-[1.1fr_1fr] gap-12 items-center">
+        <div class="reveal">
+          <p class="inline-flex items-center gap-2 rounded-full bg-violet-50 px-4 py-1.5 text-sm font-semibold text-violet-700 ring-1 ring-violet-100">
+            <span class="w-2 h-2 rounded-full bg-violet-600"></span>
+            캐이터링
+          </p>
+          <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-900 leading-[1.15]">
+            안녕하세요,<br />
+            <span class="text-blue-600">유승훈</span>입니다.
+          </h1>
+          <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+            <span class="font-semibold text-violet-700">캐이터링</span>과
+            <span class="font-semibold text-fuchsia-600">생활 체육</span>을 사랑하는 하늘의 밥맨
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#projects"
+               class="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-500 px-6 py-3 font-semibold text-white shadow-lg shadow-fuchsia-500/30 hover:opacity-90 transition">
+              프로젝트 보기
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+            <a href="#contact"
+               class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 font-semibold text-brand-900 hover:border-violet-600 hover:text-violet-700 transition">
+              연락하기
+            </a>
+          </div>
+
+          <!-- 요약 수치 -->
+          <dl class="mt-12 inline-grid grid-cols-3 divide-x divide-slate-200 rounded-2xl bg-white px-8 py-5 shadow-xl shadow-slate-900/5 ring-1 ring-slate-100">
+            <div class="pr-8 text-center">
+              <dt class="text-sm text-slate-500">주요 역할</dt>
+              <dd class="mt-1 text-xl font-bold text-brand-900">캐이터링</dd>
+            </div>
+            <div class="px-8 text-center">
+              <dt class="text-sm text-slate-500">관심사</dt>
+              <dd class="mt-1 text-xl font-bold text-brand-900">생활 체육</dd>
+            </div>
+            <div class="pl-8 text-center">
+              <dt class="text-sm text-slate-500">수영 영법</dt>
+              <dd class="mt-1 text-xl font-bold text-brand-900">4 <span class="text-base font-semibold">가지</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- 프로필 카드 -->
+        <div class="reveal relative mx-auto w-full max-w-sm">
+          <div class="absolute -left-6 top-10 z-10 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-500 px-5 py-3 text-sm font-extrabold tracking-wide text-white shadow-xl shadow-fuchsia-500/40 ring-2 ring-white -rotate-6">
+            하늘의 밥맨
+          </div>
+          <div class="overflow-hidden rounded-3xl bg-white shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200">
+            <div class="h-32 bg-gradient-to-br from-violet-600 via-violet-500 to-fuchsia-500"></div>
+            <div class="-mt-14 px-8 pb-8">
+              <div class="flex flex-col items-center text-center">
+                <div class="w-28 h-28 rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-500 ring-4 ring-white flex items-center justify-center text-4xl font-bold text-white shadow-lg">
+                  유
+                </div>
+                <h2 class="mt-4 text-xl font-bold text-brand-900">유승훈</h2>
+                <p class="text-sm text-slate-500">캐이터링</p>
+              </div>
+              <dl class="mt-8 space-y-4 text-sm">
+                <div class="flex justify-between border-t border-slate-100 pt-4">
+                  <dt class="text-slate-500">역할</dt>
+                  <dd class="font-medium text-brand-900">캐이터링</dd>
+                </div>
+                <div class="flex justify-between border-t border-slate-100 pt-4">
+                  <dt class="text-slate-500">관심사</dt>
+                  <dd class="font-medium text-brand-900">생활 체육</dd>
+                </div>
+                <div class="flex justify-between border-t border-slate-100 pt-4">
+                  <dt class="text-slate-500">연락처</dt>
+                  <dd class="font-medium text-brand-900">kelcon@daum.net</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 소개 -->
+    <section id="about" class="py-24 bg-slate-50">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="reveal max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-violet-600">About</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight text-brand-900">소개</h2>
+        </div>
+        <div class="reveal mt-12 grid md:grid-cols-3 gap-6">
+          <div class="rounded-2xl bg-white p-8 ring-1 ring-slate-200 md:col-span-2 text-center">
+            <p class="text-lg leading-relaxed text-slate-700">
+              저는 <strong class="text-brand-900">캐이터링</strong> 일을 하고 있으며,
+              <strong class="text-brand-900">생활 체육</strong>을 사랑하는 사람입니다.
+              몸을 움직이는 즐거움과 사람들과 함께 먹고 나누는 시간을 소중히 여깁니다.
+            </p>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              “하늘의 밥맨”이라는 이름처럼, 함께하는 사람들이 든든하고 즐겁게 하루를 보낼 수 있도록 정성을 다하겠습니다.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-gradient-to-br from-brand-900 to-violet-900 p-8 text-white flex flex-col justify-center items-center text-center shadow-xl shadow-violet-900/20">
+            <p class="text-4xl">🍚</p>
+            <p class="mt-3 text-lg font-bold">하늘의 밥맨</p>
+            <p class="mt-1 text-sm text-violet-200">Catering &amp; Sports Lover</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 기술 스택 -->
+    <section id="skills" class="py-24">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="reveal max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-violet-600">Skills</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight text-brand-900">기술 스택</h2>
+        </div>
+        <div class="reveal mt-12 grid sm:grid-cols-2 gap-6">
+          <div class="group rounded-2xl border border-slate-200 p-8 hover:border-violet-500 hover:shadow-lg hover:shadow-violet-500/10 transition">
+            <div class="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center text-2xl">🚚</div>
+            <h3 class="mt-5 text-xl font-bold text-brand-900">대형푸드카운전</h3>
+            <p class="mt-2 text-sm text-slate-500">대형 푸드카 운전을 담당합니다.</p>
+          </div>
+          <div class="group rounded-2xl border border-slate-200 p-8 hover:border-violet-500 hover:shadow-lg hover:shadow-violet-500/10 transition">
+            <div class="w-12 h-12 rounded-xl bg-fuchsia-50 flex items-center justify-center text-2xl">🏊</div>
+            <h3 class="mt-5 text-xl font-bold text-brand-900">수영모든영법마스터</h3>
+            <p class="mt-2 text-sm text-slate-500">자유형, 배영, 평영, 접영까지 모든 영법을 다룹니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 프로젝트 / 포트폴리오 -->
+    <section id="projects" class="py-24 bg-slate-50">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="reveal max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-widest text-violet-600">Projects</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight text-brand-900">프로젝트 &amp; 포트폴리오</h2>
+          <p class="mt-4 text-slate-600">
+            아래 카드는 예시입니다. <code class="rounded bg-white px-1.5 py-0.5 text-sm text-violet-700 ring-1 ring-slate-200">index.html</code>에서 실제 내용으로 바꿔주세요.
+          </p>
+        </div>
+
+        <div class="reveal mt-12 grid gap-6 md:grid-cols-3">
+          <article class="project-card group flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200 transition duration-300 ease-out hover:-translate-y-2 hover:ring-violet-300 hover:shadow-2xl hover:shadow-violet-600/20">
+            <div class="h-36 bg-gradient-to-br from-violet-600 to-fuchsia-500 flex items-center justify-center text-5xl transition duration-500 group-hover:scale-110">🍱</div>
+            <div class="flex flex-1 flex-col p-7">
+              <span class="self-start rounded-full bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700">케이터링</span>
+              <h3 class="mt-4 text-xl font-bold text-brand-900 transition group-hover:text-violet-700">행사 케이터링 메뉴</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                모임 규모와 취향에 맞춘 케이터링 메뉴 구성 사례입니다.
+              </p>
+              <div class="mt-auto pt-6 flex flex-wrap gap-2 text-xs text-slate-500">
+                <span class="rounded-md bg-slate-100 px-2 py-1">기획</span>
+                <span class="rounded-md bg-slate-100 px-2 py-1">메뉴 구성</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card group flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200 transition duration-300 ease-out hover:-translate-y-2 hover:ring-violet-300 hover:shadow-2xl hover:shadow-violet-600/20">
+            <div class="h-36 bg-gradient-to-br from-fuchsia-500 to-pink-500 flex items-center justify-center text-5xl transition duration-500 group-hover:scale-110">🏃</div>
+            <div class="flex flex-1 flex-col p-7">
+              <span class="self-start rounded-full bg-fuchsia-50 px-3 py-1 text-xs font-semibold text-fuchsia-700">생활 체육</span>
+              <h3 class="mt-4 text-xl font-bold text-brand-900 transition group-hover:text-violet-700">생활 체육 모임 운영</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                동호회 활동과 함께 나누는 식사 자리를 기획하고 운영한 경험입니다.
+              </p>
+              <div class="mt-auto pt-6 flex flex-wrap gap-2 text-xs text-slate-500">
+                <span class="rounded-md bg-slate-100 px-2 py-1">기획</span>
+                <span class="rounded-md bg-slate-100 px-2 py-1">운영</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card group flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200 transition duration-300 ease-out hover:-translate-y-2 hover:ring-violet-300 hover:shadow-2xl hover:shadow-violet-600/20">
+            <div class="h-36 bg-gradient-to-br from-brand-900 to-violet-700 flex items-center justify-center text-5xl transition duration-500 group-hover:scale-110">💻</div>
+            <div class="flex flex-1 flex-col p-7">
+              <span class="self-start rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">웹 페이지</span>
+              <h3 class="mt-4 text-xl font-bold text-brand-900 transition group-hover:text-violet-700">나만의 프로필 사이트</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                HTML, CSS, JavaScript와 Tailwind CSS로 만든 이 프로필 페이지입니다.
+              </p>
+              <div class="mt-auto pt-6 flex flex-wrap gap-2 text-xs text-slate-500">
+                <span class="rounded-md bg-slate-100 px-2 py-1">JavaScript</span>
+                <span class="rounded-md bg-slate-100 px-2 py-1">Tailwind</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 연락처 -->
+    <section id="contact" class="py-24">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="reveal relative overflow-hidden rounded-3xl bg-gradient-to-br from-violet-600 via-violet-700 to-fuchsia-600 px-8 py-16 md:px-16 text-center text-white shadow-2xl shadow-fuchsia-500/30">
+          <p class="text-sm font-semibold uppercase tracking-widest text-violet-200">Contact</p>
+          <h2 class="mt-3 text-3xl md:text-4xl font-bold tracking-tight">함께 이야기해요</h2>
+          <p class="mt-4 text-violet-100">캐이터링 문의, 생활 체육 모임 등 무엇이든 편하게 연락주세요.</p>
+
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="mailto:kelcon@daum.net"
+               class="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-violet-700 hover:bg-violet-50 transition">
+              이메일 보내기
+            </a>
+            <button id="copy-email" type="button"
+                    class="inline-flex items-center gap-2 rounded-lg border border-white/50 px-6 py-3 font-semibold text-white hover:bg-white/10 transition">
+              <span id="copy-label">이메일 복사</span>
+            </button>
+          </div>
+          <p class="mt-6 text-sm text-violet-200">kelcon@daum.net</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="border-t border-slate-100 py-16 md:py-20">
+    <div class="mx-auto max-w-6xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <p>&copy; <span id="year"></span> 유승훈. All rights reserved.</p>
+      <a href="#top" class="hover:text-violet-700 transition">맨 위로 ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

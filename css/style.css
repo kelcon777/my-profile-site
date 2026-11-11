@@ -1,0 +1,65 @@
+/* Tailwind로 표현하기 어려운 보조 스타일 */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* 헤더: 스크롤 시 배경 블러 */
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.06);
+}
+
+/* 히어로 배경 장식 */
+.hero-blob {
+  position: absolute;
+  top: -10rem;
+  right: -10rem;
+  width: 32rem;
+  height: 32rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(192, 38, 211, 0.18), rgba(124, 58, 237, 0.08) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 현재 보고 있는 섹션의 네비게이션 링크 강조 */
+.nav-link.active {
+  color: #1b2438;
+  font-weight: 700;
+  box-shadow: inset 0 -2px 0 #7c3aed;
+  padding-bottom: 0.25rem;
+}
+
+/* 스크롤 등장 애니메이션 */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 사용자가 모션 감소를 선호하는 경우 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* 모바일 16px 좌우 여백 보장 및 가로 스크롤 방지 */
+html,
+body {
+  overflow-x: hidden;
+}
